@@ -12,6 +12,7 @@ services:
     volumes:
       - db:/data/db
   web:
+    image: node:latest
     build: .
     command: npm run start
     volumes:
