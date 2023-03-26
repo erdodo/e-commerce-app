@@ -64,7 +64,7 @@ router.patch('/:id', async (req, res) => {
     })
     customer.validateSync()
     const errors = customer.errors
-    if (errors) {e
+    if (errors) {
         res.json({message: errors})
     }
     else {
