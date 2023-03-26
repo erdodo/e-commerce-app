@@ -3,12 +3,19 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const bodyParser = require('body-parser')
 
+const routes = require('./routes')
+const middleware = require('./middleware')
+
 const app = express()
 const port = 3000
 
 app.use(bodyParser.json());
 
-const routes = require('./routes')
+
+app.use((req, res, next) => {
+    middleware.create(req, res, next)
+});
+
 app.use('/', routes)
 
 mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {

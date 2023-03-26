@@ -15,10 +15,7 @@ router.post('/', (req, res) => {
                         customer: data
                     });
                 })
-
-
             });
-
         }
     }).catch(err => {
         res.json({message: err})

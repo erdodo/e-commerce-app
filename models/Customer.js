@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const PostSchema = new Schema({
+const CustomerSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -40,4 +40,4 @@ const PostSchema = new Schema({
         type: Date,
     }
 })
-module.exports = mongoose.model('Post', PostSchema)
+module.exports = mongoose.model('Customer', CustomerSchema)
