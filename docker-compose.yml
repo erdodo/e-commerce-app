@@ -19,8 +19,6 @@ services:
       - /usr/app/node_modules
     ports:
       - "3000:3000"
-    depends_on:
-      - mongodb
     restart: unless-stopped
     environment:
       - DB_HOST=mongodb
