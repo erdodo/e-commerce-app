@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 
 app.use((req, res, next) => {
-    middleware.create(req, res, next)
+    middleware(req, res, next)
 });
 
 app.use('/', routes)

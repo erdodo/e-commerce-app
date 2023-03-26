@@ -1,7 +1,11 @@
 const express = require('express')
 const router = express.Router()
 const Customer = require('../models/Customer.js')
+const customer = require('../middleware/customer')
 
+router.use((req, res, next) => {
+    customer(req, res, next)
+});
 //List all customers
 router.get('/', (req, res) => {
     const customer = Customer.find().then(data => {
