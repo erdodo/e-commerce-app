@@ -14,7 +14,7 @@ services:
   app:
     depends_on:
       - mongodb
-    build: ./bezkoder-app
+    build: ./e-commerce-app
     restart: unless-stopped
     ports:
       - 6868:3000
