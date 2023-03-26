@@ -6,7 +6,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    env_file: .env
     ports:
       - "4500:4500"
     links:
