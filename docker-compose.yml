@@ -11,13 +11,17 @@ services:
       - 7017:27017
     volumes:
       - db:/data/db
-  app:
+  web:
+    build: .
+    command: npm run start
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    ports:
+      - "3000:3000"
     depends_on:
       - mongodb
-    build: ./e-commerce-app
     restart: unless-stopped
-    ports:
-      - 6868:3000
     environment:
       - DB_HOST=mongodb
       - DB_USER=user
