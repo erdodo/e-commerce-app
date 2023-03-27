@@ -1,7 +1,7 @@
 version: "3.1"
 services:
-  app0:
-    container_name: app0
+  app:
+    container_name: app
     image: dockerfile
     restart: always
     build: .
