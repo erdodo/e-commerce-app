@@ -3,9 +3,10 @@ const Customer = require("../models/Customer");
 const mongoose = require("mongoose");
 module.exports =(req,res,next)=> {
     console.log("Middleware is working 11112222")
-    mongoose.connect("mongodb://127.0.0.1:27017", {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
+    res.send("web is working")
+    /*mongoose.connect("mongodb://127.0.0.1:27017", {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
         res.send("MongoDB connected 111222133")
-    })
+    })*/
     /*if(req.header('Authorization') != undefined){
         jwt.verify(req.header('Authorization').split(' ')[1], process.env.JWT_SECRET_KEY, (err, authData) => {
             if (err) {
