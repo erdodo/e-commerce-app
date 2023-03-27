@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 
 app.use('/', routes)
 
-mongoose.connect(process.env.MONGODB_URL, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
+mongoose.connect("mongodb://18.192.107.245:32769/ecommerce", {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
     console.log("MongoDB connected")
 })
 
