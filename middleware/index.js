@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const Customer = require("../models/Customer");
 const mongoose = require("mongoose");
 module.exports =(req,res,next)=> {
-    console.log("Middleware is working 1111")
+    console.log("Middleware is working 11112222")
     mongoose.connect("mongodb://localhost:27017", {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
         res.send("MongoDB connected 1112221")
     })
