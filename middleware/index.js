@@ -3,7 +3,7 @@ const Customer = require("../models/Customer");
 const mongoose = require("mongoose");
 module.exports =(req,res,next)=> {
     console.log("Middleware is working 11112222")
-    mongoose.connect("mongodb://localhost:27017", {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
+    mongoose.connect("mongodb://127.0.0.1:27017", {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
         res.send("MongoDB connected 111222133")
     })
     /*if(req.header('Authorization') != undefined){

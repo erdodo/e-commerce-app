@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 
 app.use('/', routes)
 
-mongoose.connect("mongodb://localhost:27017", {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
+mongoose.connect("mongodb://127.0.0.1:27017", {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
     console.log("MongoDB connected")
 })
 
