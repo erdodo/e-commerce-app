@@ -1,7 +1,7 @@
-version: "3"
+version: "3.1"
 services:
-  app:
-    container_name: app:0.1
+  app0:
+    container_name: app0
     image: dockerfile
     restart: always
     build: .
@@ -10,7 +10,7 @@ services:
     links:
       - mongo
   mongo:
-    container_name: mongo:0.1
+    container_name: mongo
     image: mongo
     volumes:
       - ./data:/data/db
