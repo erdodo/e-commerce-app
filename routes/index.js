@@ -5,7 +5,7 @@ const customer = require('./customer')
 const login = require('./login')
 
 router.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Hello World! merhaba cnm')
 })
 router.use('/customer', customer )
 router.use('/login', login )
