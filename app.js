@@ -7,22 +7,21 @@ const routes = require('./routes')
 const middleware = require('./middleware')
 
 const app = express()
-const port = 3000
+const port = 3001
 
 app.use(bodyParser.json());
 
 
 app.use((req, res, next) => {
-    middleware(req, res, next)
+    //middleware(req, res, next)
+    next();
 });
 
 app.use('/', routes)
 
-mongoose.connect("mongodb://127.0.0.1:27017", {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
+mongoose.connect("mongodb://localhost:27017", {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
     console.log("MongoDB connected")
 })
-
-
 
 app.listen(port, () => {
   console.log(`Example app listening on port aaa ${port}`)

@@ -4,7 +4,8 @@ const Customer = require('../models/Customer.js')
 const customer = require('../middleware/customer')
 
 router.use((req, res, next) => {
-    customer(req, res, next)
+    //customer(req, res, next)
+    next();
 });
 //List all customers
 router.get('/', (req, res) => {

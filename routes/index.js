@@ -4,7 +4,9 @@ const router = express.Router()
 const customer = require('./customer')
 const login = require('./login')
 
-
+router.get('/', (req, res) => {
+    res.send('Hello World!')
+})
 router.use('/customer', customer )
 router.use('/login', login )
 

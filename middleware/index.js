@@ -3,7 +3,7 @@ const Customer = require("../models/Customer");
 const mongoose = require("mongoose");
 module.exports =(req,res,next)=> {
     console.log("Middleware is working 11112222")
-    res.send("web is working")
+    next();
     /*mongoose.connect("mongodb://127.0.0.1:27017", {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
         res.send("MongoDB connected 111222133")
     })*/
