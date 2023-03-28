@@ -7,7 +7,7 @@ const routes = require('./routes')
 const middleware = require('./middleware')
 
 const app = express()
-const port = 3001
+const port = 3000
 
 app.use(bodyParser.json());
 
